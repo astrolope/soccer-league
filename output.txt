@@ -1,0 +1,1 @@
+Usage: node /Users/garrettcriss/Desktop/Inbox/soccer-league/league-scores.js FILENAME
