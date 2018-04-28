@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "test"
+    "test": "mocha"
   },
   "author": "Garrett Criss",
   "license": "ISC",
