@@ -1,4 +1,3 @@
-
 // Import functions.
 let processFile = require('./src/processFile');
 let calculateScores = require('./src/calculateScores');
@@ -22,7 +21,7 @@ checkArguments();
 
 //Strip file into a line-by-line array.
 processFile(fileToProcess).then(function (data) {
-    
+
     //Process file into an unsorted team: score object.
     calculateScores(data).then(function (teams) {
 
@@ -32,4 +31,3 @@ processFile(fileToProcess).then(function (data) {
     });
 
 });
-

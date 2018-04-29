@@ -1,3 +1,20 @@
+# Soccer-League
+A command line script to calculate the ranking table for a soccer-league. 
+## Installation
+
+1. Ensure you have the latest version of Node.JS installed
+2. `npm install` or `yarn install` to install the required testing dependencies. 
+
+## Usage
+
+`node soccer-league.js <FILE.txt>` 
+
+## Tests
+
+Tests are implemented using mocha and chai. To initiate tests run `npm test` or `yarn test`. 
+
+# Instructions
+
 ## The Problem
 
 We want you to create a command-line application that will calculate the

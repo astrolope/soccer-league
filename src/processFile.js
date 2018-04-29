@@ -9,6 +9,10 @@ var processFile = (file) => {
 
     return new Promise(function (resolve, reject) {
 
+        if(!file) {
+            reject("No File");
+        }
+
         var lineReader = require('readline').createInterface({
             input: fs.createReadStream(file)
             });

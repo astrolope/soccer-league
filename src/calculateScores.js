@@ -7,6 +7,10 @@ var calculateScores = (scores) => {
 
     return new Promise(function (resolve, reject) {
 
+        if(!scores) {
+            reject("No Scores");
+        }
+
         let line;
         let t1 = {};
         let t2 = {};
