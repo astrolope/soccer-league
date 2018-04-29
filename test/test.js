@@ -25,7 +25,7 @@ describe('calculateScores', function () {
 
 
     it('should calculate a draw', function () {
-        calculateScores(['Lions 3, Snakes 3']).then( (score) => {
+        calculateScores(['Lions 3, Snakes 3']).then((score) => {
             console.log(score);
             expect(score.Snakes).to.be.equal(rules.draw);
         });
@@ -33,15 +33,18 @@ describe('calculateScores', function () {
     });
 
     it('should calculate a win', function () {
-        calculateScores(['Lions 3, Snakes 0']).then( (score) => {
+        calculateScores(['Lions 3, Snakes 0']).then((score) => {
             console.log(score);
             expect(score.Lions).to.be.equal(rules.win);
         });
 
     });
 
-    it('should return scores', function () {
-
+    it('should return an object', function () {
+        calculateScores(['Lions 3, Snakes 0']).then((score) => {
+            console.log(score);
+            expect(score.Lions);
+        });
 
     });
 

@@ -20,13 +20,21 @@ const checkArguments = () => {
 checkArguments();
 
 //Strip file into a line-by-line array.
-processFile(fileToProcess).then(function (data) {
+processFile(fileToProcess).then((scores) => {
 
     //Process file into an unsorted team: score object.
-    calculateScores(data).then(function (teams) {
+    calculateScores(scores).then((teams) => {
 
         //Finally, sort the score into a list.
-        sortScore(teams);
+        sortScore(teams).then((sortedTeams) => {
+
+            for (let index = 0; index < sortedTeams.length; index++) {
+
+                const element = sortedTeams[index];
+                
+                console.log( index + 1 + ". " + element[0] + ", " + element[1])
+            }
+        });
 
     });
 

@@ -1,5 +1,5 @@
 // Takes an input array of <Team> <Score>, <Team> <Score>
-//
+// Returns an object of unsorted teams { Team: Score }
 
 const rules = require('./rules');
 
@@ -20,9 +20,31 @@ var calculateScores = (scores) => {
 
             line = scores[i];
 
-            line = line.split(" ");
+            //Split our line by the ",".
+            line = line.split(",");
             //console.log(line);
 
+            //Split our two team sections by spaces
+            var team1 = line[0].split(" ");
+
+            //Loop each team because the name can be longer than
+            //One word
+            for(var j = 0; j < team1.length; j++) {
+                let value = team1[j];
+
+                if(value.length > 0) {
+                    t1.name += value;
+                }
+                console.log(t1.name);
+            }
+            
+            var team2 = line[1].split(" ");
+            for(var k = 0; j < team2.length; k++) {
+                let value = team2[k];
+            }
+            console.log(team2);
+        }   
+            /*
             t1.name = line[0];
             t1.score = line[1].split(",")[0];
 
@@ -63,7 +85,8 @@ var calculateScores = (scores) => {
 
             }
         }
-
+        */
+    
         resolve(score);
 
     });
