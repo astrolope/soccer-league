@@ -23,13 +23,11 @@ describe('calculateScores', function () {
             .catch(done);
     });
 
-
     it('should calculate a draw', function () {
         calculateScores(['Lions 3, Snakes 3']).then((score) => {
             console.log(score);
             expect(score.Snakes).to.be.equal(rules.draw);
         });
-
     });
 
     it('should calculate a win', function () {
@@ -37,7 +35,6 @@ describe('calculateScores', function () {
             console.log(score);
             expect(score.Lions).to.be.equal(rules.win);
         });
-
     });
 
     it('should calculate a loss', function () {
@@ -45,7 +42,6 @@ describe('calculateScores', function () {
             console.log(score);
             expect(score.Snakes).to.be.equal(rules.loss);
         });
-
     });
 
     it('should return an object', function () {
@@ -53,16 +49,15 @@ describe('calculateScores', function () {
             console.log(score);
             expect(score.Lions);
         });
-
     });
 
 });
 
 //Processfile test handling
 describe('processFile', function () {
-    
+
     it('should input a txt file', function () {
-        processFile("sample-input.txt").then(function (data) {
+        processFile("sample-input.txt").then( (data) => {
             //console.log(data);
         });
     });
@@ -79,7 +74,7 @@ describe('processFile', function () {
     });
 
     it('should return an array', function () {
-        processFile("sample-input.txt").then(function (data) {
+        processFile("sample-input.txt").then( (data) => {
             console.log(data);
             expect(data[0]).to.be.equal('Lions 3, Snakes 3');
         });
@@ -89,13 +84,31 @@ describe('processFile', function () {
 
 describe('sortScores', function () {
 
+    var obj = {
+        'Snakes': 1,
+        'Lions': 5,
+        'FC Awesome': 1,
+        'Tarantulas': 6,
+        'Grouches': 0
+    };
+
     it('should sort scores in descending order', function () {
 
+        sortScore(obj).then((sorted) => {
+
+            expect(sorted[0][0]).to.be.equal('Tarantulas');
+
+        });
 
     });
 
     it('should sort alphabetically if scores are same', function () {
 
+        sortScore(obj).then((sorted) => {
+
+            expect(sorted[2][0]).to.be.equal('FC Awesome');
+
+        });
 
     });
 

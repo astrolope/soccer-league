@@ -3,30 +3,7 @@
 
 const rules = require('./rules');
 
-var sanitizeObject = (obj, arr) => {
-
-    for (var j = 0; j < arr.length; j++) {
-        let value = arr[j];
-
-        if (value == null) {
-            j++;
-        }
-
-        if (j < arr.length - 1) {
-            obj.name += value;
-            obj.name += ' ';
-        }
-
-        if (j == arr.length - 1) {
-            obj.score += Number(value);
-            obj.name.replace(/^\s+|\s+$/g, "");
-        }
-
-
-    }
-
-    return obj;
-}
+const sanitizeObject = require('./sanitizeObject');
 
 var calculateScores = (scores) => {
 
@@ -45,21 +22,22 @@ var calculateScores = (scores) => {
 
             line = scores[i];
 
-            //Split our line by the ",".
+            //Split our teams in two by the ",".
             line = line.split(",");
             //console.log(line);
 
-            //Split our two team sections by spaces
-            var team1 = line[0].split(" ");
-
+            //Initializer empty team objects for comparison.
             t1.name = "";
             t1.score = 0;
 
             t2.name = "";
             t2.score = 0;
 
+            //Split our two team sections by spaces
+            var team1 = line[0].split(" ");
+
             //Loop each team because the name can be longer than
-            //One word
+            //one word.
             sanitizeObject(t1, team1);
             
             var team2 = line[1].split(" ");

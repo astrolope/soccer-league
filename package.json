@@ -2,7 +2,7 @@
   "name": "soccer-league",
   "version": "1.0.0",
   "description": "Soccer league command line tool.",
-  "main": "app.js",
+  "main": "soccer-league.js",
   "directories": {
     "test": "test"
   },
