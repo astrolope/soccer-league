@@ -7,7 +7,7 @@ A command line script to calculate the ranking table for a soccer-league.
 
 ## Usage
 
-`node soccer-league.js <FILE.txt>` 
+`node soccer-league <FILE.txt>` 
 
 ## Tests
 
