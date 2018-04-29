@@ -60,6 +60,7 @@ describe('calculateScores', function () {
 
 //Processfile test handling
 describe('processFile', function () {
+    
     it('should input a txt file', function () {
         processFile("sample-input.txt").then(function (data) {
             //console.log(data);
@@ -88,7 +89,7 @@ describe('processFile', function () {
 
 describe('sortScores', function () {
 
-    it('should sort highest to lowest', function () {
+    it('should sort scores in descending order', function () {
 
 
     });

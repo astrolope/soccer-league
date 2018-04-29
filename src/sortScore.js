@@ -6,17 +6,17 @@ var sortScore = (scores) => {
     return new Promise(function (resolve, reject) {
 
         let score = [];
-        console.log(scores);
+        //console.log(scores);
 
         for (var team in scores) {
             score.push([team, scores[team]]);
         }
 
-        var sorted = score.sort((a, b) => b[1] - a[1]);
+        var sorted = score.sort( ( a, b ) => b[1] - a[1]);
 
         //If two scores are the same sort alphabetically
         resolve(sorted);
-        console.log(sorted);
+        //console.log(sorted);
 
     });
 }

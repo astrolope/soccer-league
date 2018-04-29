@@ -1,7 +1,7 @@
 //Defineable rules object.
 
 const rules = {
-    draw: 1, 
+    draw: 1,
     win: 3,
     loss: 0
 }
