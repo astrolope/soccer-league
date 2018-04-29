@@ -40,6 +40,14 @@ describe('calculateScores', function () {
 
     });
 
+    it('should calculate a loss', function () {
+        calculateScores(['Lions 3, Snakes 0']).then((score) => {
+            console.log(score);
+            expect(score.Snakes).to.be.equal(rules.loss);
+        });
+
+    });
+
     it('should return an object', function () {
         calculateScores(['Lions 3, Snakes 0']).then((score) => {
             console.log(score);

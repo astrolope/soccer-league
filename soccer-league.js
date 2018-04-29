@@ -32,8 +32,9 @@ processFile(fileToProcess).then((scores) => {
 
                 const element = sortedTeams[index];
                 
-                console.log( index + 1 + ". " + element[0] + ", " + element[1])
+                console.log( index + 1 + ". " + element[0] + ", " + element[1] + " pts");
             }
+
         });
 
     });

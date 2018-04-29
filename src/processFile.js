@@ -7,7 +7,7 @@ var processFile = (file) => {
     
     let matches = [];
 
-    return new Promise(function (resolve, reject) {
+    return new Promise( (resolve, reject) => {
 
         if(!file) {
             reject("No File");
