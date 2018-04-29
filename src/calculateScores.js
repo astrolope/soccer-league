@@ -17,6 +17,7 @@ var calculateScores = (scores) => {
         let t1 = {};
         let t2 = {};
         let score = {};
+        let team1, team2;
 
         for (var i = 0; i < scores.length; i++) {
 
@@ -24,7 +25,6 @@ var calculateScores = (scores) => {
 
             //Split our teams in two by the ",".
             line = line.split(",");
-            //console.log(line);
 
             //Initializer empty team objects for comparison.
             t1.name = "";
@@ -34,18 +34,17 @@ var calculateScores = (scores) => {
             t2.score = 0;
 
             //Split our two team sections by spaces
-            var team1 = line[0].split(" ");
+            team1 = line[0].split(" ");
 
             //Loop each team because the name can be longer than
             //one word.
             sanitizeObject(t1, team1);
             
-            var team2 = line[1].split(" ");
+            team2 = line[1].split(" ");
             
             sanitizeObject(t2, team2);
 
-            //console.log(t2);
-
+            //If we don't have a score yet set one now.
             if (!score[t2.name]) score[t2.name] = 0;
             if (!score[t1.name]) score[t1.name] = 0;
 

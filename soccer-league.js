@@ -28,10 +28,9 @@ processFile(fileToProcess).then((scores) => {
         //Finally, sort the score into a list.
         sortScore(teams).then((sortedTeams) => {
 
+            //Print our formatted output to the console.
             for (let index = 0; index < sortedTeams.length; index++) {
-
-                const element = sortedTeams[index];
-                
+                const element = sortedTeams[index];          
                 console.log( index + 1 + ". " + element[0] + ", " + element[1] + " pts");
             }
 

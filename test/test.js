@@ -93,23 +93,15 @@ describe('sortScores', function () {
     };
 
     it('should sort scores in descending order', function () {
-
         sortScore(obj).then((sorted) => {
-
             expect(sorted[0][0]).to.be.equal('Tarantulas');
-
         });
-
     });
 
     it('should sort alphabetically if scores are same', function () {
-
         sortScore(obj).then((sorted) => {
-
             expect(sorted[2][0]).to.be.equal('FC Awesome');
-
         });
-
     });
 
 });

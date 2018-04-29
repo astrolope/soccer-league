@@ -6,7 +6,6 @@ var sortScore = (scores) => {
     return new Promise(function (resolve, reject) {
 
         let score = [];
-        //console.log(scores);
 
         for (var team in scores) {
             score.push([team, scores[team]]);
