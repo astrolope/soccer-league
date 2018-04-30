@@ -30,8 +30,12 @@ processFile(fileToProcess).then((scores) => {
 
             //Print our formatted output to the console.
             for (let index = 0; index < sortedTeams.length; index++) {
-                const element = sortedTeams[index];          
-                console.log( index + 1 + ". " + element[0] + ", " + element[1] + " pts");
+                const element = sortedTeams[index];
+                let end = " pts";    
+                if(element[1] == 1) {
+                    end = " pt";
+                }     
+                console.log( index + 1 + ". " + element[0] + ", " + element[1] + end);
             }
 
         });
